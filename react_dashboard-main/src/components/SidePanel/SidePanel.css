@@ -1,0 +1,125 @@
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  background: #F1EAFF;
+  background: linear-gradient(to right, #F2F2F2, #EEEEEE);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar-title .close {
+  display: none;
+  font-size: 1.5rem;
+  color: #CD6688;
+  margin: 0 0.5rem 8rem 2rem;
+  cursor: pointer; 
+}
+
+.sidebar-brand {
+  margin: 3rem 1rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.sidebar-list-item {
+  padding: 1.2rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center; 
+}
+
+.sidebar-list-item i {
+  margin-right: 1rem; 
+}
+
+.sidebar-list-item:hover {
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.sidebar-list-item a {
+  text-decoration: none;
+  color: rgb(59, 58, 58);
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-list-item a:hover {
+  text-decoration: none;
+  color: burlywood;
+  margin: 0.1rem;
+}
+
+.responsive-sidebar {
+  display: inline !important;
+  position: absolute;
+  /*z-indexof the sidebar should be higher so that the charts are not showing over the sidebar on small screen*/
+  z-index: 12 !important;
+}
+
+.userBtn {
+  margin-top: auto;
+  padding: 0 1.1rem 1.5rem;
+}
+
+.loginBtn {
+  background: #3E54AC;
+  color: #fff; 
+  padding: 0.7rem 1rem; 
+  border: none; 
+  cursor: pointer; 
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
+
+.loginBtn:hover {
+  margin-left: 0.3rem;
+  color: #9575DE;
+}
+
+.logoutBtn {
+  background: #913175;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border: none; 
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
+
+.logoutBtn:hover {
+  color: #FCC5C0;
+  margin-left: 0.3rem;
+}
+
+
+@media screen and (max-width: 992px) {
+  #sidebar {
+    display: none;
+  }
+
+  .sidebar-title .close {
+    display: inline;
+  }
+  
+}

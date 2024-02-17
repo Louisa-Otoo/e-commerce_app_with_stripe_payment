@@ -1,0 +1,10 @@
+###
+POST https://remote-app-api-c4a491abd7bc.herokuapp.com/api/login
+content-type: application/json
+
+{
+    "email": "chloe@mail.com",
+    "password": "admin1234"
+}
+
+

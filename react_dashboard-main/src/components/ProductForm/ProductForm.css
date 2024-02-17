@@ -1,0 +1,73 @@
+
+.productForm {
+  border: 2px solid #ddd;
+  padding: 2rem; 
+  text-align: left;
+  height:35rem;
+  max-width: 30rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.5rem 15rem;
+  background: linear-gradient(to bottom, #FFF3DA, #E5D4FF, #D8B4F8);
+}
+
+.title {
+  color: rgb(84, 83, 83);
+  font-size: 1.4rem;
+  text-transform: uppercase; 
+} 
+
+.product_group {
+  margin-bottom: 1.5rem;
+}
+
+.product_group label {
+  display: block;
+  color: #555;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+.product_group input {
+  width: 27rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.updateBtn {
+  background-color: #6a5a73;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  /* margin-top: 1rem; */
+}
+
+.updateBtn:hover {
+  color: #434242;
+  background-color: #c397e8;
+}
+
+.updateBtn:active {
+  transform: translateY(1px);
+} 
+
+
+@media screen and (max-width: 992px) {
+  .productForm {
+    max-width: 20rem;
+    width: 100%;
+    margin: 1rem 2rem;
+  }
+
+  .product_group input {
+    width: 100%; /* Make the input fields full width on smaller screens */
+  }
+  
+}
