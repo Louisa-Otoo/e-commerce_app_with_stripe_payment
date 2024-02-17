@@ -24,10 +24,10 @@ const Login = () => {
       return;
     }
 
-    const apiUrl = 'http://localhost:9097/shop/v1/login';
+    const apiUrl = (`${import.meta.env.VITE_APP_URL}/shop/v1/login`)
 
     try {
-      const response = await fetch(apiUrl, {
+        const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,9 +73,8 @@ const handleGoogleLogin = async (credentialResponse) => {
     };
     // console.log(formattedGoogleUser);
 
-
     if (formattedGoogleUser.google_id > 0) {
-      const response = await fetch('http://localhost:9097/shop/v1/google-login', {
+      const response = await fetch(`${import.meta.env.VITE_APP_URL}/shop/v1/google-login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

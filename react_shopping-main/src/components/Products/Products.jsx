@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import '../Products/products.css';
 import { useAuth } from '../../Context/AuthContext';
@@ -12,11 +11,9 @@ const Products = () => {
 
 
   useEffect(() => {
-    const apiUrl = 'http://localhost:9097/shop/v1/products';
-
     const fetchData = async () => {
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(`${import.meta.env.VITE_APP_URL}/shop/v1/products`);
         const data = await response.json();
 
         // Use reduce to update products and check for changes
@@ -37,7 +34,7 @@ const Products = () => {
       }
     };
 
-    fetchData(); // Initial fetch
+    fetchData();
 
     const intervalId = setInterval(() => {
       fetchData();
@@ -55,10 +52,10 @@ const Products = () => {
       console.error("User not found in localStorage");
       return;
     }
-
+    
     let userId = user.id;
     try {
-      const response = await fetch('http://localhost:9097/shop/v1/order', {
+      const response = await fetch(`${import.meta.env.VITE_APP_URL}/shop/v1/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

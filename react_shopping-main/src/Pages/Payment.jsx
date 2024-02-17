@@ -20,7 +20,7 @@ const Payment = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:9097/stripe/v1/config')
+        fetch(`${import.meta.env.VITE_APP_URL}/stripe/v1/config`)
             .then(async (response) => {
                 const { publishableKey } = await response.json();
                 setStripePromise(loadStripe(publishableKey));
@@ -32,7 +32,7 @@ const Payment = () => {
 
     useEffect(() => {
         if (isLoggedIn) {
-            fetch('http://localhost:9097/stripe/v1/create-payment-intent', {
+            fetch(`${import.meta.env.VITE_APP_URL}/stripe/v1/create-payment-intent`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

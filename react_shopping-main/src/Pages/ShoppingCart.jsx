@@ -31,10 +31,10 @@ const ShoppingCart = () => {
         setAuthUser(false);
       }
     };
-
+  
     const fetchUserSpecificData = async (userId) => {
       try {
-        const response = await fetch('http://localhost:9097/shop/v1/orderWithUserId', {
+        const response = await fetch(`${import.meta.env.VITE_APP_URL}/shop/v1/orderWithUserId`, {
           method: 'POST',
           headers: {
             'content-type': 'application/json',
@@ -100,7 +100,7 @@ const ShoppingCart = () => {
           return;
         }
 
-        const result = await fetch(`http://localhost:9097/shop/v1/deleteAnOrder/${cartItemId}`, {
+        const result = await fetch(`${import.meta.env.VITE_APP_URL}/shop/v1/deleteAnOrder/${cartItemId}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

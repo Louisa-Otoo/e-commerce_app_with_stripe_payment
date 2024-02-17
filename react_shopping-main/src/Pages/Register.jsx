@@ -15,7 +15,7 @@ export const Register = () => {
 
   const onSubmission = async (formData) => {
     try {
-      const response = await fetch('http://localhost:9097/shop/v1/user', {
+      const response = await fetch(`${import.meta.env.VITE_APP_URL}/shop/v1/user`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
