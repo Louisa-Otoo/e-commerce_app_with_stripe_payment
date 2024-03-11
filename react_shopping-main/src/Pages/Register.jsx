@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
-import '../components/css/register.css'
 import { Link, useNavigate  } from 'react-router-dom'
 import { useAuth } from '../Context/AuthContext'
+import '../components/css/register.css'
 
 
 export const Register = () => {

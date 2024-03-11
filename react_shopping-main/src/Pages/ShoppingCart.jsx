@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useAuth } from '../Context/AuthContext';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import '../components/css/cart.css';
-import { useAuth } from '../Context/AuthContext';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom'
 
 
 const ShoppingCart = () => {
@@ -152,7 +152,7 @@ return (
                   <img className="order-image" src={item.products.image} alt={item.products.name} />
                   <div className="order-details">
                     <h3 className="order-name">{item.products.name}</h3>
-                    <p className="order-price">${item.price}</p>
+                    <p className="order-price">GHC{item.price}</p>
                   </div>
                   <button className="removeBtn" onClick={() => handleRemoveFromCart(item.id)}>
                     Remove
@@ -169,12 +169,12 @@ return (
         <div className="inner-rightBox">
           <h2>Order Summary</h2>
           <h3>
-            Sub Total: ${totalPrice}  
+            Sub Total: GHC{totalPrice}  
           </h3>
           <small>Delivery fees not included yet</small>
           <div>
           <Link to={`/payment?totalPrice=${totalPrice}`}>
-            <button type='submit' className='checkoutBtn'>Checkout (${totalPrice})</button>
+            <button type='submit' className='checkoutBtn'>Checkout (GHC{totalPrice})</button>
           </Link>
           </div>
         </div>

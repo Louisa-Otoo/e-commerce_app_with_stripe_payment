@@ -5,10 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const Products = () => {
+const Products = ({ search }) => {
   const [products, setProducts] = useState([]);
   const { setCartCount, setTotalPrice } = useAuth();
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,19 +64,19 @@ const Products = () => {
           product_id: product_id,
         })
       });
-      console.log(response);
+      // console.log(response);
       if (response.status == 409) {
         let res = await response.json();
         toast.error('Product has already been added to cart');
-        console.log(res)
+        // console.log(res)
 
         return
       }
       if (response.status === 200 || response.status === 201) {
         const res = await response.json();
-        console.log(res);
+        //console.log(res);
         const { product_id } = res;
-        console.log(product_id);
+        //console.log(product_id);
 
         toast.success("Item added to cart", {
           position: toast.POSITION.TOP_LEFT,
@@ -95,6 +94,7 @@ const Products = () => {
     }
   };
 
+
   return (
     <>
       <ToastContainer />
@@ -103,7 +103,16 @@ const Products = () => {
         <h3 className='title'>Our Products</h3>
 
         <div className='all-products'>
-          {products.map((product) => (
+          {products
+          .filter((product) => {
+            return search.toLowerCase() === '' 
+            ? product 
+            : product.name.toLowerCase().includes(search);
+          })
+          // .filter((product) =>
+          //     search.trim() === '' ? true : product.name.toLowerCase().includes(search.toLowerCase())
+          //   )
+          .map((product) => (
             <div className='product-card' key={product.id}>
               <img
                 className='product-image'
@@ -113,7 +122,7 @@ const Products = () => {
 
               <div className='product-details'>
                 <h3 className='product-name'>{product.name}</h3>
-                <p className='product-price'>${product.price}</p>
+                <p className='product-price'>GHC{product.price}</p>
               </div>
 
               <button

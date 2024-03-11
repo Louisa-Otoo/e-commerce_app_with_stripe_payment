@@ -1,6 +1,6 @@
 import React from 'react'
-import '../components/css/success.css'
 import { Link } from 'react-router-dom';
+import '../components/css/success.css'
 
 export const Success = () => {
 

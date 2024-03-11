@@ -1,12 +1,11 @@
-
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../Context/AuthContext';
-import '../components/css/login.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
+import { useAuth } from '../Context/AuthContext';
+import '../components/css/login.css';
 
 
 const Login = () => {

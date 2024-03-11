@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext.jsx';
 import Checkout_Form from '../components/Checkout/Checkout_Form.jsx';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+
 
 
 const Payment = () => {
@@ -59,7 +58,6 @@ const Payment = () => {
 
     return (
         <>
-            <h1>Heights Payment Plan</h1>
             {clientSecret && stripePromise && (
                 <Elements stripe={stripePromise} options={{ clientSecret }}>
                     <Checkout_Form amount={totalPrice}/>

@@ -1,10 +1,12 @@
+import { useEffect, useState } from 'react';
 import '../Header/Header.css'
 import { Link, useNavigate, NavLink } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
-import { useEffect } from 'react';
 
 
-const Header = () => {
+const Header = ({ setSearchQuery }) => {
+  const [search, setSearch] = useState('');
+  // console.log(search)
   const { authUser, setAuthUser, isLoggedIn, setIsLoggedIn, logout, cartCount } = useAuth();
   const navigate = useNavigate();
 
@@ -22,12 +24,18 @@ const Header = () => {
   }, [setIsLoggedIn, setAuthUser]); 
 
 
-
   const handleLogout = () => {
     logout();
     navigate('/login');
   }
 
+
+  // Update search query when input changes
+  const handleSearchInputChange = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+    setSearchQuery(value); // Update search query in the parent component
+  }
 
   return (
     <>
@@ -35,7 +43,7 @@ const Header = () => {
         <h1 className='logo'>Heights</h1>
 
         <div className='search'>
-          <input type="text" placeholder='search'/>
+          <input type="text" placeholder='search' value={search} onChange={handleSearchInputChange} />
         </div>
 
         <div className='header-links'>
