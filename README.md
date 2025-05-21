@@ -1,6 +1,3 @@
-## ✅ 2. **E-commerce Website**
-
-```markdown
 # E-commerce Website
 
 A modern and responsive full-stack e-commerce web application that provides users with a seamless online shopping experience, including browsing, purchasing, and managing orders.
