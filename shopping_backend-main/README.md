@@ -1,18 +1,49 @@
-# node_sql
- nodejs application connected to an sql database
+# 🛠️ Backend - E-commerce Website
 
-## SQL
+This is the backend API of the E-commerce Website built using **Node.js** and **Express.js**. It handles all business logic, authentication, database operations, and payment processing.
 
-- sqlite3
-- mongoDB
-- mysql
-- postgreSQL
+## 🚀 Features
+- User registration and login with JWT
+- Google OAuth login
+- Product and category APIs
+- Cart and order management
+- Stripe payment integration
+- Secure endpoints and middleware
 
-## ASSIGNMENTS
+## 📦 Tech Stack
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Database**: MySQL with Knex.js
+- **Authentication**: JWT, Google OAuth
+- **Payments**: Stripe
+- **Environment Management**: dotenv
 
-- [x] clone repository && run npm install
-- [x] write client side javascript to register new user
-- [x] write client side javascript to get all employees
-- [x] write client side javascript to create new employee
-- [x] write client side javascript to update employee
-- [x] write client side javascript to delete employee
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js
+- MySQL
+- npm
+
+### Installation
+
+cd shopping_backend-main
+npm install
+
+
+Running the Backend
+- npm run dev
+
+The server will run on http://localhost:5000 by default.
+
+🔐 Environment Variables
+- Create a .env file in the backend/ directory and include:
+ - PORT=5000
+ - DB_HOST=localhost
+ - DB_USER=root
+ - DB_PASSWORD=your_password
+ - DB_NAME=ecommerce
+ - JWT_SECRET=your_jwt_secret
+ - GOOGLE_CLIENT_ID=your_google_client_id
+ - GOOGLE_CLIENT_SECRET=your_google_client_secret
+ - STRIPE_SECRET_KEY=your_stripe_secret_key
