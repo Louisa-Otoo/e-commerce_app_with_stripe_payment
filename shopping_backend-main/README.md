@@ -39,11 +39,11 @@ This is the backend API of the E-commerce Website built using **Node.js** and **
 🔐 Environment Variables
 - Create a .env file in the backend/ directory and include:
    - PORT=5000
- - DB_HOST=localhost
- - DB_USER=root
- - DB_PASSWORD=your_password
- - DB_NAME=ecommerce
- - JWT_SECRET=your_jwt_secret
- - GOOGLE_CLIENT_ID=your_google_client_id
- - GOOGLE_CLIENT_SECRET=your_google_client_secret
- - STRIPE_SECRET_KEY=your_stripe_secret_key
+   - DB_HOST=localhost
+   - DB_USER=root
+   - DB_PASSWORD=your_password
+   - DB_NAME=ecommerce
+   - JWT_SECRET=your_jwt_secret
+   - GOOGLE_CLIENT_ID=your_google_client_id
+   - GOOGLE_CLIENT_SECRET=your_google_client_secret
+   - STRIPE_SECRET_KEY=your_stripe_secret_key
