@@ -38,7 +38,7 @@ This is the backend API of the E-commerce Website built using **Node.js** and **
 
 🔐 Environment Variables
 - Create a .env file in the backend/ directory and include:
- -- PORT=5000
+   - PORT=5000
  - DB_HOST=localhost
  - DB_USER=root
  - DB_PASSWORD=your_password
