@@ -20,22 +20,22 @@ This is the frontend application of the E-commerce Website built using **React.j
 ## 🛠️ Getting Started
 
 ### Prerequisites
-- Node.js
-- npm
+  - Node.js
+  - npm
 
 ### Installation
 
-- cd react_shopping-main
-- npm install
+  - cd react_shopping-main
+  - npm install
 
 ### Running the Frontend
 
-- npm start
-- The app will run on http://localhost:3000 by default.
+  - npm start
+  - The app will run on http://localhost:3000 by default.
 
 
 🔐 Environment Variables
 Create a .env file in the frontend/ directory and include:
 
-REACT_APP_API_URL=http://localhost:5000/api
-REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key_here
+  - REACT_APP_API_URL=http://localhost:5000/api
+  - REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key_here
