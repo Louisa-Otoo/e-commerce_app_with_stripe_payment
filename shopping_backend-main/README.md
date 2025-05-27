@@ -27,14 +27,14 @@ This is the backend API of the E-commerce Website built using **Node.js** and **
 
 ### Installation
 
-cd shopping_backend-main
-npm install
+- cd shopping_backend-main
+- npm install
 
 
-Running the Backend
+### Running the Backend
 - npm run dev
 
-The server will run on http://localhost:5000 by default.
+- The server will run on http://localhost:5000 by default.
 
 🔐 Environment Variables
 - Create a .env file in the backend/ directory and include:
